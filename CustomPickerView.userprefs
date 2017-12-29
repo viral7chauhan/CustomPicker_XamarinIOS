@@ -1,0 +1,18 @@
+﻿<Properties StartupConfiguration="{6FEA7073-5B8D-4044-A209-0FA463A6FA6A}|Default">
+  <MonoDevelop.Ide.Workbench ActiveDocument="iOS/CustomPicker/MyPickerContainer.cs">
+    <Files>
+      <File FileName="iOS/ViewController.cs" Line="10" Column="9" />
+      <File FileName="iOS/CustomPicker/MyPickerContainer.cs" Line="41" Column="31" />
+      <File FileName="iOS/Main.cs" Line="17" Column="1" />
+    </Files>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug|iPhoneSimulator" />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MultiItemStartupConfigurations />
+  <MonoDevelop.Ide.ItemProperties.CustomPickerView.iOS PreferredExecutionTarget="MonoDevelop.IPhone.IPhoneSimulatorTarget.ADA23E49-27F3-4378-921C-C6CBFA122736">
+    <MonoDevelop.MacDev.AppleDevelopmentTeam />
+  </MonoDevelop.Ide.ItemProperties.CustomPickerView.iOS>
+</Properties>

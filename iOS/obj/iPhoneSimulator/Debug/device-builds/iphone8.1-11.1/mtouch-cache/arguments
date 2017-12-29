@@ -1,0 +1,39 @@
+# Version: 11.4.0.214 (d15-5: c4240f3f)
+# [first argument, ignore] # --cache
+/Library/Frameworks/Xamarin.iOS.framework/Versions/11.4.0.214/lib/mtouch/mtouch.exe \
+	/Users/viralchauhan/Projects/CustomPickerView/iOS/obj/iPhoneSimulator/Debug/device-builds/iphone8.1-11.1/mtouch-cache \
+	--sim \
+	/Users/viralchauhan/Projects/CustomPickerView/iOS/bin/iPhoneSimulator/Debug/device-builds/iphone8.1-11.1/CustomPickerView.iOS.app \
+	--executable \
+	CustomPickerView.iOS \
+	--debug \
+	--nolink \
+	--sdkroot \
+	/Applications/Xcode.app/Contents/Developer \
+	--sdk \
+	11.1 \
+	--targetver \
+	8.0 \
+	--aot-options=-O=-float32 \
+	--http-message-handler=HttpClientHandler \
+	--abi=x86_64 \
+	--symbollist \
+	/Users/viralchauhan/Projects/CustomPickerView/iOS/obj/iPhoneSimulator/Debug/device-builds/iphone8.1-11.1/mtouch-symbols.list \
+	--dsym=no \
+	-r \
+	/Users/viralchauhan/Projects/CustomPickerView/packages/Xamarin.TestCloud.Agent.0.20.3/lib/Xamarin.iOS10/Calabash.dll \
+	-r \
+	/Library/Frameworks/Xamarin.iOS.framework/Versions/Current/lib/mono/Xamarin.iOS/mscorlib.dll \
+	-r \
+	/Library/Frameworks/Xamarin.iOS.framework/Versions/Current/lib/mono/Xamarin.iOS/System.Core.dll \
+	-r \
+	/Library/Frameworks/Xamarin.iOS.framework/Versions/Current/lib/mono/Xamarin.iOS/System.dll \
+	-r \
+	/Library/Frameworks/Xamarin.iOS.framework/Versions/Current/lib/mono/Xamarin.iOS/System.Xml.dll \
+	-r \
+	/Library/Frameworks/Xamarin.iOS.framework/Versions/Current/lib/mono/Xamarin.iOS/Xamarin.iOS.dll \
+	-r \
+	/Users/viralchauhan/Projects/CustomPickerView/packages/Xamarin.TestCloud.Agent.0.20.3/lib/Xamarin.iOS10/Calabash.dll \
+	--target-framework \
+	'Xamarin.iOS,v1.0' \
+	/Users/viralchauhan/Projects/CustomPickerView/iOS/bin/iPhoneSimulator/Debug/CustomPickerView.iOS.exe \
