@@ -54,16 +54,6 @@ namespace CustomPickerView.iOS.CustomPicker
 
             tableViewPrepare();
 
-            // border
-            itemTableView.Layer.BorderColor = UIColor.LightGray.CGColor;
-            itemTableView.Layer.BorderWidth = 1.5f;
-
-            // drop shadow
-            itemTableView.Layer.ShadowColor = UIColor.Black.CGColor;
-            itemTableView.Layer.ShadowOpacity = 0.8f;
-            itemTableView.Layer.ShadowRadius = (nfloat)3.0;
-            itemTableView.Layer.ShadowOffset = new CGSize(2.0, 2.0);
-
         }
 
         private void addBlurEffect()
@@ -85,9 +75,35 @@ namespace CustomPickerView.iOS.CustomPicker
             itemTableView.RowHeight = UITableView.AutomaticDimension;
             itemTableView.EstimatedRowHeight = 44;
 
+            //CornerRadius
             itemTableView.Layer.CornerRadius = 16.0f;
             itemTableView.Layer.MasksToBounds = true;
             itemTableView.TableFooterView = new UIView();
+
+            // border
+            itemTableView.Layer.BorderColor = UIColor.LightGray.CGColor;
+            itemTableView.Layer.BorderWidth = 1.5f;
+
+            // drop shadow
+            itemTableView.Layer.ShadowColor = UIColor.Black.CGColor;
+            itemTableView.Layer.ShadowOpacity = 0.8f;
+            itemTableView.Layer.ShadowRadius = (nfloat)3.0;
+            itemTableView.Layer.ShadowOffset = new CGSize(2.0, 2.0);
+        }
+
+        private void pickerLayoutWithParent ()
+        {
+            UIApplication.SharedApplication.KeyWindow.AddSubview(this);
+
+            this.TranslatesAutoresizingMaskIntoConstraints = false;
+
+            var window = UIApplication.SharedApplication.KeyWindow;
+
+            var viewsDictionary = NSDictionary.FromObjectsAndKeys(new NSObject[] { this }, new NSObject[] { new NSString("pickerView") });
+
+            window.AddConstraints(NSLayoutConstraint.FromVisualFormat("H:|[pickerView]|", 0, new NSDictionary(), viewsDictionary));
+            window.AddConstraints(NSLayoutConstraint.FromVisualFormat("V:|[pickerView]|", 0, new NSDictionary(), viewsDictionary));
+
         }
 
         #endregion
@@ -138,6 +154,7 @@ namespace CustomPickerView.iOS.CustomPicker
 
         #region Public
 
+        //Take new datasource list from outside
         public void setPickerItemWith(List<string> items)
         {
             pickerItems.Clear();
@@ -148,11 +165,12 @@ namespace CustomPickerView.iOS.CustomPicker
         public void pickerOpen()
         {
             itemTableView.ReloadData();
-            Frame = UIApplication.SharedApplication.KeyWindow.Frame;
-            UIApplication.SharedApplication.KeyWindow.AddSubview(this);
+            pickerLayoutWithParent();
+
             this.Alpha = 0;
             UIView.Animate(animtionDuration, () => this.Alpha = 1);
         }
+
 
         public void pickerClose()
         {
